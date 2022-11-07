@@ -17,7 +17,7 @@ O projeto tem por objetivo a realização de um crud de Clientes.
 
 ## Contexto
 
-> API de cadastro de clientes da categoria PF(pessoa física). O processo foi dividido em 3 etapas para evitar necessidade de envio de um grande número de informações de uma única vez, visando a garantia do recebimento dos dados. 
+> API de cadastro de clientes da categoria PF (pessoa física). O processo foi dividido em 3 etapas para evitar necessidade de envio de um grande número de informações de uma única vez, visando a garantia do recebimento dos dados. 
 
 ## Tecnologias
 - Java 11
