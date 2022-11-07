@@ -1,2 +1,0 @@
-INSERT INTO endereco (id, cep, rua, bairro, complemento, cidade, estado) VALUES (1, '40000000', 'Rua A', 'Bairro B', 'Complemento C', 'Salvador', 'BA');
-INSERT INTO cliente (id, cpf, data_de_nascimento, documento, email, endereco_id, nome, sobrenome) VALUES (1, '13112939069', '1990-04-01', null, 'erick@email.com', 1, 'Erick', 'Cartman');

@@ -51,7 +51,6 @@ class BuscaClienteControllerTest {
         Mockito.when(mapper.toResponse(cliente)).thenReturn(clienteResponse);
         Mockito.when(clienteService.executa(anyString())).thenReturn(cliente);
 
-
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get(ConstantsUtils.CLIENTES_API.concat(ConstantsUtils.EMAIL_DEFAULT));
 
         mvc.perform(request).andExpect(status().isOk()).andExpect(jsonPath("nome").value(clienteResponse.getNome())).andExpect(jsonPath("sobrenome").value(clienteResponse.getSobrenome())).andExpect(jsonPath("cpf").value(clienteResponse.getCpf())).andExpect(jsonPath("email").value(clienteResponse.getEmail()));
@@ -68,6 +67,6 @@ class BuscaClienteControllerTest {
 
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get(ConstantsUtils.CLIENTES_API);
 
-        mvc.perform(request);
+        mvc.perform(request).andExpect(status().isOk());
     }
 }
