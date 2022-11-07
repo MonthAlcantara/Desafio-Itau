@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "97fec309-bce2-4868-bc44-4796a53b4d0c",
+		"name": "CRUD-Clientes Itau",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11431404"
+	},
+	"item": [
+		{
+			"name": "Cadastra Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Fulano da Silva\",\r\n    \"sobrenome\":\"Fulano da Silva\",\r\n    \"cpf\" :\"13112939069\",\r\n    \"email\":\"fulano_da_silva@email.com.br\",\r\n    \"dataDeNascimento\":\"24/10/1990\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca todos os clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca cliente por Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/clientes/fulano_da_silva@email.com.br",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"clientes",
+						"fulano_da_silva@email.com.br"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Fulano\",\r\n    \"sobrenome\":\"da Silva\",\r\n    \"cpf\" :\"13112939069\",\r\n    \"email\":\"fulano_da_silva@email.com.br\",\r\n    \"dataDeNascimento\":\"24/10/1990\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/clientes/fulano_da_silva@email.com.br",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"clientes",
+						"fulano_da_silva@email.com.br"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleta Cliente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/clientes/fulano_da_silva@email.com.br",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"clientes",
+						"fulano_da_silva@email.com.br"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra Endereco Cliente",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bairro\": \"Bairro A\",\r\n    \"cep\": \"4000000\",\r\n    \"cidade\": \"Salvador\",\r\n    \"complemento\": \"Complemento B\",\r\n    \"estado\": \"Bahia\",\r\n    \"rua\": \"Rua C\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/clientes/1/endereco",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"clientes",
+						"1",
+						"endereco"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastra Arquivo Cliente",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/monti/OneDrive/Área de Trabalho/colacao_grau/Atestado_Conclusao_Curso.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/clientes/1/arquivo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"clientes",
+						"1",
+						"arquivo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
